@@ -2,8 +2,6 @@ import { container } from "tsyringe";
 import { CreateUserService } from "../services/CreateUserService";
 import { GetUsersService } from "../services/GetUsersService";
 
-
-
 const usersResolvers = {
   Query: {
     getAllUsers() {
