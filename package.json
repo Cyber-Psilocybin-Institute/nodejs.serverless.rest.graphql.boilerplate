@@ -1,0 +1,45 @@
+{
+  "name": "nodejs.serverless.rest.graphql.boilerplate",
+  "version": "1.0.0",
+  "description": "boilerplate of a serverless application using nodejs, with REST and GraphQL protocols",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --watch 'src/**' --transpile-only --ignore-watch node_modules -r tsconfig-paths/register  src/server.ts "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyber-Psilocybin-Institute/nodejs.serverless.rest.graphql.boilerplate.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest",
+    "graphql",
+    "typescript"
+  ],
+  "author": "Cyber Psilocybin Institute",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Cyber-Psilocybin-Institute/nodejs.serverless.rest.graphql.boilerplate/issues"
+  },
+  "homepage": "https://github.com/Cyber-Psilocybin-Institute/nodejs.serverless.rest.graphql.boilerplate#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/mongoose": "^5.11.97",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "express-async-errors": "^3.1.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.8.0",
+    "graphql-tools": "^8.2.0",
+    "mongoose": "^6.2.0",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.6.0"
+  }
+}
