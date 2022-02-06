@@ -1,3 +1,8 @@
+<h3 align="center">
+  <img src="./assets/images/cyber-psilocybin-logo.png" width="400">
+</h3>
+
+
 # nodejs.serverless.rest.graphql.boilerplate
 🧙‍♂️ boilerplate of a serverless application using nodejs, with REST and GraphQL protocols
 
