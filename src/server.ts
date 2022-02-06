@@ -7,6 +7,8 @@ import mongoose from "mongoose";
 import { graphqlHTTP } from "express-graphql";
 import { makeExecutableSchema } from "@graphql-tools/schema";
 
+import { routes } from "./routes";
+
 import resolvers from "./resolvers";
 import typeDefs from "./schemas";
 
@@ -27,6 +29,8 @@ const schema = makeExecutableSchema({
 const app = express();
 
 app.use(express.json());
+
+app.use(routes);
 
 app.use("/graphql", graphqlHTTP({
   schema,
