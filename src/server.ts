@@ -4,6 +4,11 @@ import "reflect-metadata";
 import express, { NextFunction, Request, Response } from "express";
 import "express-async-errors";
 import mongoose from "mongoose";
+import { graphqlHTTP } from "express-graphql";
+import { makeExecutableSchema } from "@graphql-tools/schema";
+
+import resolvers from "./resolvers";
+import typeDefs from "./schemas";
 
 dotenv.config();
 
@@ -14,9 +19,19 @@ mongoose.connect(process.env.MONGODB_URL, {
   // useUnifiedTopology: true
 });
 
+const schema = makeExecutableSchema({
+  resolvers,
+  typeDefs
+});
+
 const app = express();
 
 app.use(express.json());
+
+app.use("/graphql", graphqlHTTP({
+  schema,
+  graphiql: true
+}));
 
 app.use(
   (error: Error, request: Request, response: Response, next: NextFunction) => {
